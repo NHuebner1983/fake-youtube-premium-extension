@@ -2,16 +2,27 @@ var part1ss = `<nice-logo id="anubiskun" class="style-scope ytd-topbar-logo-rend
 var part2ss = `<path d="M68.4103 9.09902V18.5557H65.5928V9.30834C65.5928 8.28764 65.327 7.77729 64.7132 7.77729C64.2216 7.77729 63.7724 8.06186 63.4667 8.59338C63.4832 8.76271 63.4902 8.93439 63.4879 9.10373V18.5605H60.668V9.30834C60.668 8.28764 60.4022 7.77729 59.7884 7.77729C59.2969 7.77729 58.8665 8.06186 58.5631 8.57456V18.5628H55.7456V6.03929H57.9728L58.2221 7.63383H58.2621C58.8947 6.42969 59.9178 5.77588 61.1219 5.77588C62.3072 5.77588 62.9799 6.36854 63.288 7.43157C63.9418 6.34973 64.9225 5.77588 66.0443 5.77588C67.7564 5.77588 68.4103 7.00119 68.4103 9.09902Z" class="style-scope yt-icon"></path><path d="M69.8191 2.8338C69.8191 1.4862 70.3106 1.09814 71.3501 1.09814C72.4132 1.09814 72.8812 1.54734 72.8812 2.8338C72.8812 4.22373 72.4108 4.57181 71.3501 4.57181C70.3106 4.56945 69.8191 4.22138 69.8191 2.8338ZM69.9837 6.03935H72.6789V18.5629H69.9837V6.03935Z" class="style-scope yt-icon"></path><path d="M81.891 6.03955V18.5631H79.6849L79.4403 17.032H79.3792C78.7466 18.2573 77.827 18.7677 76.684 18.7677C75.0095 18.7677 74.2522 17.7046 74.2522 15.3975V6.0419H77.0697V15.2352C77.0697 16.3382 77.3002 16.7874 77.867 16.7874C78.3844 16.7663 78.8477 16.4582 79.0688 15.9902V6.0419H81.891V6.03955Z" class="style-scope yt-icon"></path><path d="M96.1901 9.09893V18.5557H93.3726V9.30825C93.3726 8.28755 93.1068 7.7772 92.493 7.7772C92.0015 7.7772 91.5523 8.06177 91.2465 8.59329C91.263 8.76027 91.2701 8.9296 91.2677 9.09893V18.5557H88.4502V9.30825C88.4502 8.28755 88.1845 7.7772 87.5706 7.7772C87.0791 7.7772 86.6487 8.06177 86.3453 8.57447V18.5627H83.5278V6.0392H85.7527L85.9973 7.63139H86.0372C86.6699 6.42725 87.6929 5.77344 88.8971 5.77344C90.0824 5.77344 90.755 6.3661 91.0631 7.42913C91.7169 6.34729 92.6976 5.77344 93.8194 5.77344C95.541 5.77579 96.1901 7.0011 96.1901 9.09893Z" class="style-scope yt-icon"></path><path d="M40.0566 6.34524V7.03668C40.0566 10.4915 38.5255 12.5118 35.1742 12.5118H34.6638V18.5583H31.9263V1.42285H35.414C38.6078 1.42285 40.0566 2.7728 40.0566 6.34524ZM37.1779 6.59218C37.1779 4.09924 36.7287 3.50658 35.1765 3.50658H34.6662V10.4727H35.1365C36.6064 10.4727 37.1803 9.40968 37.1803 7.10253L37.1779 6.59218Z" class="style-scope yt-icon"></path></g></g></svg></nice-logo>`
 var fullss = part1ss + part2ss
 
-var css1ss = `<style> .nice-logo-container.nice-logo,nice-logo{display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;vertical-align:middle;fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);width:var(--iron-icon-width,24px);height:var(--iron-icon-height,24px);margin-left:var(--iron-icon_-_margin-left);margin-bottom:var(--iron-icon_-_margin-bottom);margin-right:var(--iron-icon_-_margin-right);width:var(--iron-icon_-_width,var(--iron-icon-width,24px));height:var(--iron-icon_-_height,var(--iron-icon-height,24px));margin-top:var(--iron-icon_-_margin-top)}</style>`
-var css2ss = `nice-logo.ytd-topbar-logo-renderer{height:20px;width:90px;padding:18px 14px 18px 16px;color:var(--yt-spec-wordmark-text);-ms-flex:none;-webkit-flex:none;flex:none}`
+var css = `<style>.nice-logo-container.nice-logo,nice-logo{display:-ms-inline-flexbox;display:-webkit-inline-flex;display:inline-flex;-ms-flex-align:center;-webkit-align-items:center;align-items:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;position:relative;vertical-align:middle;fill:var(--iron-icon-fill-color,currentcolor);stroke:var(--iron-icon-stroke-color,none);width:var(--iron-icon-width,24px);height:var(--iron-icon-height,24px);margin-left:var(--iron-icon_-_margin-left);margin-bottom:var(--iron-icon_-_margin-bottom);margin-right:var(--iron-icon_-_margin-right);width:var(--iron-icon_-_width,var(--iron-icon-width,24px));height:var(--iron-icon_-_height,var(--iron-icon-height,24px));margin-top:var(--iron-icon_-_margin-top)} nice-logo.ytd-topbar-logo-renderer{height:20px;width:90px;padding:18px 14px 18px 16px;color:var(--yt-spec-wordmark-text);-ms-flex:none;-webkit-flex:none;flex:none}</style>`
 
-original_logo = document.getElementById('logo-icon');
-original_logo.insertAdjacentHTML('afterend', fullss);
-
-cssfile1 = document.getElementById('ext-styles');
-cssfile1.insertAdjacentHTML('afterend', css1ss);
-
-cssfile2 = document.getElementById('ext-styles');
-cssfile2.insertAdjacentHTML('beforeend', css2ss);
-
-document.getElementById("logo-icon").remove();
+function load() {
+    if (document.getElementById('logo-icon')) {
+        var logoIcons = document.querySelectorAll('#logo-icon');
+        logoIcons.forEach(function(logoIcon) {
+            logoIcon.insertAdjacentHTML('afterend', fullss);
+            
+            var cssfile1 = document.getElementById('ext-styles');
+            cssfile1.insertAdjacentHTML('afterend', css);
+            
+            logoIcon.remove();
+        });
+    } else {
+        var homeIcon = document.getElementsByTagName("ytm-home-logo")[0];
+        var newDiv = document.createElement("new-icon");
+        newDiv.innerHTML = fullss;
+        homeIcon.parentNode.prepend(newDiv);
+    
+        document.head.innerHTML += css;
+        homeIcon.style.display = "none";
+    }
+}
+window.onload = load;
